@@ -1,0 +1,14 @@
+
+
+entity Orden {
+  cliente Long,
+  accionId Long,
+  accion String,
+  operacion String,
+  precio Double,
+  cantidad Long,
+  fechaOperacion String,
+  modo String,
+  estado String
+}
+

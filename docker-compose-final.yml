@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  generador:
+    image: jhipster/jhipster
+    container_name: generador
+    ports:
+      - "8888:8080"
+    volumes:
+      - ./FinalProgr2/:/home/jhipster/app
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DEVTOOLS_ADDITIONAL_OPTIONS=--spring-boot.run.fork=false # Disable fork for DevTools
+    tty: true
+
+  procesador:
+    image: jhipster/jhipster
+    container_name: procesador
+    ports:
+      - "9999:8080"
+    volumes:
+      - ./final-p2/:/home/jhipster/app
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DEVTOOLS_ADDITIONAL_OPTIONS=--spring-boot.run.fork=false # Disable fork for DevTools
+    tty: true

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "2pm",
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

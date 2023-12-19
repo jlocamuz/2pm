@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  jhipster2:
+    image: jhipster/jhipster
+    container_name: agus
+    ports:
+      - "9090:8080"
+    volumes:
+      - /Users/julialocamuz/Downloads/final-p2-main:/home/jhipster/app
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DEVTOOLS_ADDITIONAL_OPTIONS=--spring-boot.run.fork=false # Disable fork for DevTools
+    tty: true
